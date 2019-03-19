@@ -5,6 +5,7 @@ import { NamingStrategyInterface } from 'typeorm/naming-strategy/NamingStrategyI
 import { snakeCase } from 'typeorm/util/StringUtils'
 import Page from './pages/entity';
 import Creature from './creatures/entity'
+import User from './users/entity'
 
 class CustomNamingStrategy extends DefaultNamingStrategy implements NamingStrategyInterface {
 
@@ -31,7 +32,8 @@ export default () =>
       url: process.env.DATABASE_URL || 'postgres://postgres:pages@localhost:5432/postgres',
       entities: [
           Page,
-          Creature
+          Creature,
+          User
       ],
       synchronize: true,
       logging: true,
