@@ -4,9 +4,9 @@
   "description": "",
   "main": "target/index.js",
   "scripts": {
-    "postinstall":"tsc -p",
     "start":"nodemon .",
     "compile": "tsc --watch",
+    "postinstall":"tsc -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
